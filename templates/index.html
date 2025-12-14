@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ profile.name }} — Portfolio</title>
+
+  <!-- Fonts & Bootstrap -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#top">{{ profile.name }}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+              aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#writing">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          {% if resume_url %}
+          <li class="nav-item"><a class="btn btn-sm btn-primary ms-lg-3" href="{{ resume_url }}" target="_blank" rel="noopener">Resume</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Flash messages -->
+  <div class="container mt-3">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for cat, msg in messages %}
+          <div class="alert alert-{{ cat }} alert-dismissible fade show" role="alert">
+            {{ msg }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </div>
+
+  <!-- Hero -->
+  <header id="top" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-8">
+          <h1 class="display-5 fw-bold">Hi — I'm <span class="text-gradient">{{ profile.name }}</span></h1>
+          <p class="lead mb-3">{{ profile.tagline }}</p>
+          <p class="text-secondary mb-4">
+            {{ about }}
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#projects" class="btn btn-primary">My work</a>
+            <a href="#contact" class="btn btn-outline-secondary">Contact me</a>
+            
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="{{ profile_img }}" class="profile-photo" alt="Profile photo">
+          <div class="small text-secondary mt-2">📍{{ profile.location }}</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <hr class="my-0">
+
+  <!-- About / Education -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div class="row">
+        <div class="col-lg-8">
+          <p class="mb-4">
+            Aspiring Artificial Intelligence and Data Science student with strong analytical and problem-solving skills. Passionate 
+about turning data into actionable insights using Python, SQL, and visualization tools.
+          <div class="d-flex flex-wrap gap-2">
+            {% for s in skills %}
+              <span class="badge rounded-pill text-bg-light skill-pill">{{ s }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Education</h5>
+              <ul class="list-unstyled mb-0">
+                {% for edu in education %}
+                <li class="mb-3">
+                  <div class="fw-semibold">{{ edu.title }}</div>
+                  <div class="text-secondary small">{{ edu.org }}<br>{{ edu.period }}</div>
+                  <div class="small">{{ edu.notes }}</div>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- Experience -->
+<section id="experience" class="py-5 bg-body-tertiary">
+  <div class="container">
+
+    <!-- Heading -->
+    <h2 class="section-title mb-4">Experience</h2>
+
+    <!-- Accordion -->
+    <div class="accordion" id="expAcc">
+      {% for comp in experience %}
+      <div class="accordion-item mb-2">
+        <h2 class="accordion-header" id="h{{ loop.index }}">
+          <button class="accordion-button {{ 'collapsed' if not loop.first }}" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#c{{ loop.index }}">
+            <span class="me-2 fw-semibold">{{ comp.company }}</span>
+            <span class="text-secondary small"> — {{ comp.period }}</span>
+          </button>
+        </h2>
+
+        <div id="c{{ loop.index }}" class="accordion-collapse collapse {{ 'show' if loop.first }}"
+             data-bs-parent="#expAcc">
+          <div class="accordion-body">
+
+            {% if comp.role %}
+            <div class="fw-semibold">{{ comp.role }}</div>
+            {% endif %}
+
+            {% if comp.bullets %}
+            <ul class="mt-2">
+              {% for b in comp.bullets %}
+              <li>{{ b }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+
+            {% if comp.projects %}
+            <div class="mt-3">
+              <h6 class="fw-semibold">Projects</h6>
+              <div class="list-group list-group-flush">
+                {% for p in comp.projects %}
+                <div class="list-group-item px-0 py-2">
+  <div class="list-group-item px-0 py-2">
+
+  <div class="fw-semibold">{{ p.title }}</div>
+  <div class="text-secondary small">{{ p.period }}</div>
+
+  {% if p.desc %}
+  <div class="text-secondary small mt-1">{{ p.desc }}</div>
+  {% endif %}
+
+  {% if p.code_url %}
+  <div class="mt-2">
+    <a href="{{ p.code_url }}" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary">
+      Code
+    </a>
+  </div>
+  {% endif %}
+
+</div>
+
+
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Projects -->
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="row g-4">
+        {% for p in projects %}
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card h-100 border-0 shadow-sm">
+            {% if p.image %}
+              <img src="{{ url_for('static', filename=p.image) if p.image else '' }}" class="card-img-top" alt="Project image">
+            {% endif %}
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">{{ p.title }}</h5>
+              <p class="card-text text-secondary">{{ p.desc }}</p>
+              <div class="mb-3">
+                {% for t in p.tags %}<span class="badge me-1 text-bg-light">{{ t }}</span>{% endfor %}
+              </div>
+              <div class="mt-auto d-flex flex-wrap gap-2">
+                {% for link in p.links %}
+                  <a class="btn btn-sm btn-outline-primary" href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing -->
+  <section id="writing" class="py-5 bg-body-tertiary">
+    <div class="container">
+      <h2 class="section-title">Achievements</h2>
+      <div class="row g-4">
+        {% for w in writing %}
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">{{ w.title }}</h5>
+              <div class="text-secondary small mb-2">{{ w.when }}</div>
+              <p class="card-text">{{ w.summary }}</p>
+              <a href="{{ w.url }}" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener">Certificate</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <form method="post" action="{{ url_for('contact') }}" class="card border-0 shadow-sm">
+            <div class="card-body">
+              <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input name="name" type="text" class="form-control" placeholder="Your name" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input name="email" type="email" class="form-control" placeholder="you@example.com" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea name="message" rows="5" class="form-control" placeholder="Write your message..." required></textarea>
+              </div>
+              <button class="btn btn-primary">Send message</button>
+              <span class="small text-secondary ms-2">or email: <a href="mailto:{{ profile.email }}">{{ profile.email }}</a></span>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h5 class="card-title">Find me online</h5>
+              <ul class="list-unstyled mb-0">
+                {% if profile.github %}
+                <li class="mb-2">GitHub — <a href="{{ profile.github }}" target="_blank" rel="noopener">{{ profile.github }}</a></li>
+                {% endif %}
+                {% if profile.linkedin %}
+                <li class="mb-2">LinkedIn — <a href="{{ profile.linkedin }}" target="_blank" rel="noopener">{{ profile.linkedin }}</a></li>
+                {% endif %}
+                <li class="mb-2">{{ profile.location }}</li>
+              </ul>
+              <p class="small text-secondary mt-3">
+                Your message will be saved locally (messages.txt). Replace this with an email service when you deploy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 border-top">
+    <div class="container small text-secondary d-flex flex-wrap justify-content-between align-items-center">
+      <div>© {{ now_year }} {{ profile.name }}</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

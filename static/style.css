@@ -1,0 +1,50 @@
+:root{
+  --accent:#0ea5e9;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Hero */
+.text-gradient{
+  background: linear-gradient(90deg, #0ea5e9, #22c55e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.profile-photo{
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #fff;
+}
+
+/* Sections */
+.section-title{
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.skill-pill{
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* Project cards */
+.project-card{
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.project-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.08)!important;
+}
+
+/* Small tweaks */
+.navbar-brand{letter-spacing:.2px}
+.card-title{font-weight:600}
+.lead{color:#475569}
