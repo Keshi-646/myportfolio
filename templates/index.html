@@ -25,12 +25,13 @@
       <div id="nav" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Resume</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#writing">Achievements</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           {% if resume_url %}
-          <li class="nav-item"><a class="btn btn-sm btn-primary ms-lg-3" href="{{ resume_url }}" target="_blank" rel="noopener">Resume</a></li>
+          
           {% endif %}
         </ul>
       </div>
@@ -93,24 +94,67 @@ about turning data into actionable insights using Python, SQL, and visualization
           </div>
         </div>
         <div class="col-lg-4 mt-4 mt-lg-0">
-          <div class="card border-0 shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Education</h5>
-              <ul class="list-unstyled mb-0">
-                {% for edu in education %}
-                <li class="mb-3">
-                  <div class="fw-semibold">{{ edu.title }}</div>
-                  <div class="text-secondary small">{{ edu.org }}<br>{{ edu.period }}</div>
-                  <div class="small">{{ edu.notes }}</div>
-                </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
+  
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Resume / Education -->
+<section id="education" class="py-5">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="section-title">My Resume</h2>
+      <p class="text-secondary">
+        An overview of my qualifications and experiences
+      </p>
+    </div>
+
+    <!-- Resume Card -->
+    <div class="card border-0 shadow-sm p-4">
+      <div class="row align-items-center g-4">
+
+        <!-- Left Content -->
+        <div class="col-md-8">
+          <h4 class="fw-bold mb-1">Keshiya V</h4>
+          <p class="text-secondary mb-3">
+            SNS College of Engineering | Artificial Intelligence & Data Science
+          </p>
+
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              🎓 Studying B.Tech Artificial Intelligence & Data Science
+            </li>
+            <li class="mb-2">
+              💼 Internship experience in Flutter & Python applications
+            </li>
+            <li class="mb-2">
+              🚀 Strong interest in AI, Data Science
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Button -->
+        <div class="col-md-4 text-md-end">
+          {% if resume_url %}
+          <a href="{{ resume_url }}" target="_blank"
+             class="btn btn-primary btn-lg px-4">
+            📄 View Complete Resume
+          </a>
+          {% else %}
+          <p class="text-secondary small">
+            Add <code>resume.pdf</code> in <b>/static</b> folder
+          </p>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
  
   <!-- Experience -->

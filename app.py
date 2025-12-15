@@ -46,9 +46,9 @@ EXPERIENCE = [
         "projects": [
             {
                 "title": "Blood Bank App",
-                "period": "2025",
-                "desc": "Browser-based scanner; integrated LLM for parsing.",
-                "code_url": "https://github.com/Keshi-646/BarcodeScanner"   # <--- ADD THIS
+                #"period": "2025",
+                "desc": "A Flutter-based web app that connects blood donors and recipients with smart eligibility checks and easy donation management.",
+                "code_url": "https://github.com/Keshi-646/blood-bank"   # <--- ADD THIS
             }
         ]
     },
@@ -63,7 +63,7 @@ EXPERIENCE = [
         "projects": [
             {
                 "title": "Spam Email Detection",
-                "period": "2025",
+                #"period": "2025",
                 "desc": "Developed a system to classify emails as spam or legitimate using Python and machine learning.",
                 "code_url": "https://github.com/Keshi-646/Spam-Email-Detection"        # <--- ADD THIS
             }
@@ -73,6 +73,16 @@ EXPERIENCE = [
 
 
 PROJECTS = [
+    {
+        "title": "Blood Bank App",
+        "desc": "A Flutter-based web app that connects blood donors and recipients with smart eligibility checks and easy donation management.",
+        "tags": ["Flutter", "Dart"],
+        "links": [
+            #{"label": "Live", "url": "#"},
+            {"label": "Code", "url": "https://github.com/Keshi-646/blood-bank"},
+        ],
+        "image": "project4.png",  # put this in /static if you have it
+    },
     {
         "title": "Spam Email Detection",
         "desc": "Developed a system to classify emails as spam or legitimate using Python and machine learning. ",

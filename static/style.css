@@ -2,13 +2,27 @@
   --accent:#0ea5e9;
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+/* Global reset */
+*{
+  box-sizing:border-box;
 }
 
-/* Hero */
+html{
+  scroll-behavior:smooth;
+}
+
+/* ===============================
+   GLOBAL BACKGROUND
+   =============================== */
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #dbeafe; /* SKY BLUE */
+  color: #0f172a;
+}
+
+/* ===============================
+   HERO
+   =============================== */
 .text-gradient{
   background: linear-gradient(90deg, #0ea5e9, #22c55e);
   -webkit-background-clip: text;
@@ -21,30 +35,129 @@ body{
   height: 220px;
   object-fit: cover;
   border-radius: 50%;
-  border: 6px solid #fff;
+  border: 6px solid #ffffff;
 }
 
-/* Sections */
+/* ===============================
+   SECTIONS
+   =============================== */
 .section-title{
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.skill-pill{
-  border: 1px solid rgba(0,0,0,0.08);
+/* Remove Bootstrap section grey */
+.bg-body-tertiary{
+  background-color: transparent !important;
 }
 
-/* Project cards */
+/* ===============================
+   SKILLS
+   =============================== */
+.skill-pill{
+  border: 1px solid rgba(0,0,0,0.08);
+  background-color: #ffffff;
+}
+
+/* ===============================
+   PROJECT CARDS
+   =============================== */
 .project-card{
   transition: transform .12s ease, box-shadow .12s ease;
+  background-color: #ffffff;
 }
+
 .project-card:hover{
   transform: translateY(-3px);
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.08)!important;
 }
 
-/* Small tweaks */
-.navbar-brand{letter-spacing:.2px}
-.card-title{font-weight:600}
-.lead{color:#475569}
+/* ===============================
+   ACCORDION (EXPERIENCE SECTION)
+   =============================== */
+
+/* Accordion header */
+.accordion-button,
+.accordion-button:not(.collapsed){
+  background-color: #fdfdfd  !important;
+  color: #0f172a !important;
+  box-shadow: none !important;
+  font-weight: 600;
+}
+
+/* Hover effect */
+.accordion-button:hover{
+  background-color: #c6def9 !important;
+}
+
+/* Accordion container */
+.accordion-item{
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Accordion content */
+.accordion-body{
+  background-color: #ffffff;
+}
+
+/* ===============================
+   NAVBAR & TEXT
+   =============================== */
+.navbar{
+  background-color: #ffffff !important;
+}
+
+.navbar-brand{
+  letter-spacing:.2px;
+  font-weight: 700;
+}
+
+.nav-link{
+  font-weight: 500;
+}
+
+.card-title{
+  font-weight:600;
+}
+
+.lead{
+  color:#475569;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+.btn-primary{
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-outline-primary{
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-outline-primary:hover{
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+/* ===============================
+   CARDS (GLOBAL)
+   =============================== */
+.card{
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+/* ===============================
+   FOOTER (optional polish)
+   =============================== */
+footer{
+  background-color: transparent;
+}
