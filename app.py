@@ -17,13 +17,13 @@ PROFILE = {
     "email": "keshipraba95228@gmail.com",
     "github": "https://github.com/Keshi-646",
     "linkedin": "https://www.linkedin.com/in/keshiya-v",
-    "resume_url": None,  # e.g. url_for('static', filename='resume.pdf') after you add it
+    "resume_url": None,
 }
 
 ABOUT = (
-    "I’m a third-year AI & DS student focused on building practical, "
+    "I'm a third-year AI & DS student focused on building practical, "
     "readable, and user-friendly projects. I enjoy turning ideas into working demos "
-    "and I’m open to internships."
+    "and I'm open to internships."
 )
 
 EDUCATION = [
@@ -34,7 +34,6 @@ EDUCATION = [
     }
 ]
 
-# ------------------- EXPERIENCE (grouped by company) -------------------
 EXPERIENCE = [
     {
         "company": "Kevell Global Solutions",
@@ -46,9 +45,8 @@ EXPERIENCE = [
         "projects": [
             {
                 "title": "Blood Bank App",
-                #"period": "2025",
                 "desc": "A Flutter-based web app that connects blood donors and recipients with smart eligibility checks and easy donation management.",
-                "code_url": "https://github.com/Keshi-646/blood-bank"   # <--- ADD THIS
+                "code_url": "https://github.com/Keshi-646/blood-bank"
             }
         ]
     },
@@ -63,9 +61,24 @@ EXPERIENCE = [
         "projects": [
             {
                 "title": "Spam Email Detection",
-                #"period": "2025",
                 "desc": "Developed a system to classify emails as spam or legitimate using Python and machine learning.",
-                "code_url": "https://github.com/Keshi-646/Spam-Email-Detection"        # <--- ADD THIS
+                "code_url": "https://github.com/Keshi-646/Spam-Email-Detection"
+            }
+        ]
+    }, 
+
+    {
+        "company": "Skypark iTech",
+        "period": "January 2026",
+        "role": "Intern",
+        "bullets": [
+            "I gained experience in Web developer."
+        ],
+        "projects": [
+            {
+                "title": "E-Sevai App",
+                "desc": "Developed a e-sevai web app for client.",
+                "code_url": "https://github.com/Keshi-646/esevai"
             }
         ]
     }
@@ -74,77 +87,97 @@ EXPERIENCE = [
 
 PROJECTS = [
     {
+        "title": "HireFusion",
+        "desc": "An AI-powered recruitment and hiring platform engineered to streamline candidate evaluation, automate resume analysis, and optimize hiring workflows through intelligent automation and smart decision-making support — transforming how organizations discover and onboard top talent.",
+        "tags": ["AI", "Recruitment", "Automation", "Python"],
+        "links": [
+            {"label": "Code", "url": "https://github.com/Keshi-646/hirefusion-"},
+        ],
+        "image": "project5.png",
+        "featured": True,
+    },
+    {
         "title": "Blood Bank App",
-        "desc": "A Flutter-based web app that connects blood donors and recipients with smart eligibility checks and easy donation management.",
+        "desc": "A robust Flutter-based platform engineered to seamlessly connect blood donors with recipients in need. Features intelligent eligibility validation, real-time donor matching, and streamlined donation management — making life-saving connections faster and more reliable.",
         "tags": ["Flutter", "Dart"],
         "links": [
-            #{"label": "Live", "url": "#"},
             {"label": "Code", "url": "https://github.com/Keshi-646/blood-bank"},
         ],
-        "image": "project4.png",  # put this in /static if you have it
+        "image": "project4.png",
+        "featured": False,
     },
     {
         "title": "Spam Email Detection",
-        "desc": "Developed a system to classify emails as spam or legitimate using Python and machine learning. ",
-        "tags": ["Python", "ML"],
+        "desc": "A high-accuracy machine learning system built with Python to intelligently classify incoming emails as spam or legitimate. Leverages advanced text processing and classification algorithms to protect users from unwanted and malicious email content.",
+        "tags": ["Python", "Machine Learning", "NLP"],
         "links": [
-            #{"label": "Live", "url": "#"},
             {"label": "Code", "url": "https://github.com/Keshi-646/Spam-Email-Detection"},
         ],
-        "image": "project1.png",  # put this in /static if you have it
+        "image": "project1.png",
+        "featured": False,
     },
     {
-        "title": "Speech Therapy",
-        "desc": "Designed and developed a Speech Therapy App providing personalized exercises, real-time feedback, and progress tracking. - Aimed at making speech therapy more engaging, effective, and widely available.",
+        "title": "Speech Therapy App",
+        "desc": "An innovative Python-based application delivering personalized speech therapy exercises with real-time feedback and comprehensive progress tracking. Designed to make professional-grade speech therapy more accessible, engaging, and effective for users of all ages.",
         "tags": ["Python"],
         "links": [
-            #{"label": "Demo", "url": "#"},
             {"label": "Code", "url": "https://github.com/Keshi-646/Speech-Therapy"},
         ],
         "image": "project2.png",
+        "featured": False,
     },
     {
         "title": "Enunciating Dictionary",
-        "desc": "Built an offline app using Tkinter and JSON for word meanings and pronunciation",
-        "tags": ["Python", "JSON"],
+        "desc": "A feature-rich offline dictionary application built with Python Tkinter and JSON, delivering instant word meanings, definitions, and pronunciation guides — all without requiring an internet connection.",
+        "tags": ["Python", "Tkinter", "JSON"],
         "links": [
-            #{"label": "Live", "url": "#"},
             {"label": "Code", "url": "https://github.com/Keshi-646/Enunciating-Dict"},
         ],
         "image": "project3.png",
+        "featured": False,
     },
 ]
 
 ACHIEVEMENTS = [
     {
-        "title": "Paper presentation on Agriculture",
+        "title": "Paper Presentation on Agriculture",
         "when": "2023",
         "summary": "Banari Amman Institute of Technology",
         "url": "https://drive.google.com/file/d/1wkUGiiILVI5QNhCuaqB989El6D4iRAcA/view?usp=sharing",
+        "icon": "🏆",
     },
     {
         "title": "Math Quiz",
         "when": "2024",
         "summary": "KGiSL Institute of Technology",
         "url": "https://drive.google.com/file/d/1noKH24lpDR39dUUFVIIbbGLJYRbj4zD1/view?usp=drive_link",
+        "icon": "🧮",
     },
     {
-        "title": "UI&UX Unplugged",
+        "title": "UI & UX Unplugged",
         "when": "2025",
         "summary": "Karpagam Institute of Technology",
         "url": "https://drive.google.com/file/d/1RD5hfdgw6_fbbqZ7iAuyPF4J9A3Or6BV/view?usp=drive_link",
+        "icon": "🎨",
     },
     {
         "title": "Data Quest",
         "when": "2025",
         "summary": "Karpagam Institute of Technology",
         "url": "https://drive.google.com/file/d/1svAKCOdgebbzI3KXwJoS32EKewLAxQyQ/view?usp=drive_link",
+        "icon": "📊",
     },
 ]
 
 SKILLS = [
-    "Python", "MySQL", "Flutter", "Streamlit", "GenAI",
-    "Agentic AI", "HTML/CSS basics", "n8n"
+    {"name": "Python", "icon": "🐍", "category": "Languages"},
+    {"name": "MySQL", "icon": "🗄️", "category": "Database"},
+    {"name": "Flutter", "icon": "📱", "category": "Frameworks"},
+    {"name": "Streamlit", "icon": "⚡", "category": "Frameworks"},
+    {"name": "GenAI", "icon": "🤖", "category": "AI/ML"},
+    {"name": "Agentic AI", "icon": "🧠", "category": "AI/ML"},
+    {"name": "HTML/CSS", "icon": "🌐", "category": "Web"},
+    {"name": "n8n", "icon": "🔄", "category": "Automation"},
 ]
 
 # ----------------------------- ROUTES -----------------------------
@@ -155,7 +188,6 @@ def home():
         if static_exists("profile.jpeg")
         else "https://via.placeholder.com/240x240.png?text=Your+Photo"
     )
-    # Optional resume
     resume_url = PROFILE["resume_url"]
     if resume_url is None and static_exists("resume.pdf"):
         resume_url = url_for("static", filename="resume.pdf")
@@ -184,14 +216,12 @@ def contact():
         flash("Please fill in all contact fields.", "danger")
         return redirect(url_for("home"))
 
-    # Minimal “store” — append to a text file (replace with email service in prod)
     with open(os.path.join(BASE_DIR, "messages.txt"), "a", encoding="utf-8") as f:
         f.write(f"[{datetime.now().isoformat(sep=' ', timespec='seconds')}] {name} <{email}>: {message}\n")
 
-    flash("Thanks! Your message was sent successfully.", "success")
-    return redirect(url_for("home"))
+    flash("Thank you! Your message has been sent successfully. I'll get back to you soon!", "success")
+    return redirect(url_for("home") + "#contact")
 
 # ----------------------------- MAIN -----------------------------
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
-

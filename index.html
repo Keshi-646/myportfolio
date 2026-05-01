@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keshiya V — AI Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Keshiya V, an Aspiring AI Engineer & Data Science student building intelligent, user-friendly applications. Open to internship opportunities." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#top" class="nav-brand">
+        <span class="brand-letter">K</span>eshiya<span class="brand-dot">.</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"        class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills"       class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#experience"   class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#projects"     class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#education"    class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+        <li><a href="#contact"      class="nav-link" data-section="contact">Contact</a></li>
+        <li><a href="static/resume.pdf" target="_blank" class="nav-cta">Resume <i class="fas fa-arrow-up-right-from-square fa-xs"></i></a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== MOBILE MENU ========== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about"        class="mobile-link">About</a>
+    <a href="#skills"       class="mobile-link">Skills</a>
+    <a href="#experience"   class="mobile-link">Experience</a>
+    <a href="#projects"     class="mobile-link">Projects</a>
+    <a href="#education"    class="mobile-link">Education</a>
+    <a href="#achievements" class="mobile-link">Achievements</a>
+    <a href="#contact"      class="mobile-link">Contact</a>
+    <a href="static/resume.pdf" target="_blank" class="mobile-link mobile-cta">Download Resume</a>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section id="top" class="hero">
+    <div class="hero-bg">
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge animate-fade-up delay-1">
+          <span class="badge-dot"></span>
+          <span>Available for Internships &amp; Opportunities</span>
+        </div>
+        <h1 class="hero-title animate-fade-up delay-2">
+          Hi, I'm <span class="gradient-text">Keshiya V</span>
+        </h1>
+        <div class="hero-role animate-fade-up delay-3">
+          <span class="role-prefix">A passionate</span>
+          <div class="typed-wrapper">
+            <span class="typed-text" id="typedText"></span><span class="typed-cursor">|</span>
+          </div>
+        </div>
+        <p class="hero-desc animate-fade-up delay-4">
+          A driven B.Tech AI &amp; Data Science student engineering practical, user-centric solutions at the intersection of intelligence and innovation — actively seeking internship opportunities to make a real-world impact.
+        </p>
+        <div class="hero-actions animate-fade-up delay-5">
+          <a href="#projects" class="btn-primary-grad">
+            <span>View My Work</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn-outline-grad">
+            <span>Let's Connect</span>
+          </a>
+          <a href="static/resume.pdf" target="_blank" class="btn-resume">
+            <i class="fas fa-file-pdf"></i>
+            <span>Resume</span>
+          </a>
+        </div>
+        <div class="hero-stats animate-fade-up delay-6">
+          <div class="stat-item">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Internships</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">4</span>
+            <span class="stat-label">Achievements</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image animate-slide-right delay-3">
+        <div class="profile-ring">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
+          <img src="static/profile.jpeg" alt="Keshiya V — AI Engineer" class="profile-img">
+        </div>
+        <div class="float-badge badge-ai">
+          <i class="fas fa-brain"></i>
+          <span>AI Engineer</span>
+        </div>
+        <div class="float-badge badge-code">
+          <i class="fas fa-code"></i>
+          <span>Python Dev</span>
+        </div>
+        <div class="profile-location">
+          <i class="fas fa-location-dot"></i>
+          <span>Theni, India</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="about-lead">
+            I'm a third-year <strong>B.Tech student specialising in Artificial Intelligence &amp; Data Science</strong> at SNS College of Engineering, Coimbatore — on a mission to transform complex problems into elegant, intelligent solutions.
+          </p>
+          <p class="about-body">
+            My journey is driven by curiosity and a deep passion for building practical, readable, and user-friendly technology. Whether it's crafting AI-powered applications, developing machine learning pipelines, or designing intuitive user experiences — I bring both technical precision and creative thinking to every project.
+          </p>
+          <p class="about-body">
+            With hands-on internship experience in Flutter development, Machine Learning, and Web Development, I've translated classroom concepts into real-world impact. I thrive in collaborative environments and I'm actively seeking internship opportunities where I can contribute meaningfully and continue growing as an AI engineer.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <strong>B.Tech AI &amp; Data Science</strong>
+                <span>SNS College of Engineering</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-briefcase"></i>
+              <div>
+                <strong>3 Internship Experiences</strong>
+                <span>Flutter · Machine Learning · Web Development</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Theni, India</strong>
+                <span>Open to Remote &amp; Relocation</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-cta">
+            <a href="#contact" class="btn-primary-grad">
+              <span>Hire Me</span>
+              <i class="fas fa-paper-plane"></i>
+            </a>
+            <a href="static/resume.pdf" target="_blank" class="btn-outline-grad">
+              <i class="fas fa-download"></i>
+              <span>Download CV</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="about-visual reveal">
+          <div class="about-card glass-card">
+            <div class="about-card-header">
+              <div class="card-dots"><span></span><span></span><span></span></div>
+              <span class="card-title-label">keshiya.ai</span>
+            </div>
+            <div class="code-block">
+              <div class="code-line"><span class="code-keyword">const</span> <span class="code-var">keshiya</span> <span class="code-op">=</span> {</div>
+              <div class="code-line pl-2"><span class="code-key">role:</span> <span class="code-str">"AI Engineer"</span>,</div>
+              <div class="code-line pl-2"><span class="code-key">year:</span> <span class="code-str">"3rd Year B.Tech"</span>,</div>
+              <div class="code-line pl-2"><span class="code-key">passion:</span> <span class="code-str">"Building AI Solutions"</span>,</div>
+              <div class="code-line pl-2"><span class="code-key">status:</span> <span class="code-str">"Open to Internships"</span>,</div>
+              <div class="code-line pl-2"><span class="code-key">focus:</span> [</div>
+              <div class="code-line pl-4"><span class="code-str">"GenAI"</span>, <span class="code-str">"Agentic AI"</span>,</div>
+              <div class="code-line pl-4"><span class="code-str">"Python"</span>, <span class="code-str">"ML"</span></div>
+              <div class="code-line pl-2">],</div>
+              <div class="code-line">};</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">My Toolkit</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+        <p class="section-subtext">Technologies and tools I work with to build intelligent solutions</p>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal" style="--delay:0s">
+          <div class="skill-icon-wrap"><span class="skill-icon">🐍</span></div>
+          <div class="skill-info"><span class="skill-name">Python</span><span class="skill-category">Languages</span></div>
+          <div class="skill-glow"></div>
+        </div>
+
+        <div class="skill-card reveal" style="--delay:0.1s">
+          <div class="skill-icon-wrap"><span class="skill-icon">🗄️</span></div>
+          <div class="skill-info"><span class="skill-name">MySQL</span><span class="skill-category">Database</span></div>
+          <div class="skill-glow"></div>
+        </div>
+
+        <div class="skill-card reveal" style="--delay:0.2s">
+          <div class="skill-icon-wrap"><span class="skill-icon">📱</span></div>
+          <div class="skill-info"><span class="skill-name">Flutter</span><span class="skill-category">Frameworks</span></div>
+          <div class="skill-glow"></div>
+        </div>
+
+        <div class="skill-card reveal" style="--delay:0.3s">
+          <div class="skill-icon-wrap"><span class="skill-icon">⚡</span></div>
+          <div class="skill-info"><span class="skill-name">Streamlit</span><span class="skill-category">Frameworks</span></div>
+          <div class="skill-glow"></div>
+        </div>
+
+        <div class="skill-card reveal" style="--delay:0.4s">
+          <div class="skill-icon-wrap"><span class="skill-icon">🤖</span></div>
+          <div class="skill-info"><span class="skill-name">GenAI</span><span class="skill-category">AI / ML</span></div>
+          <div class="skill-glow"></div>
+        </div>
+
+        <div class="skill-card reveal" style="--delay:0.5s">
+          <div class="skill-icon-wrap"><span class="skill-icon">🧠</span></div>
+          <div class="skill-info"><span class="skill-name">Agentic AI</span><span class="skill-category">AI / ML</span></div>
+          <div class="skill-glow"></div>
+        </div>
+
+        <div class="skill-card reveal" style="--delay:0.6s">
+          <div class="skill-icon-wrap"><span class="skill-icon">🌐</span></div>
+          <div class="skill-info"><span class="skill-name">HTML / CSS</span><span class="skill-category">Web</span></div>
+          <div class="skill-glow"></div>
+        </div>
+
+        <div class="skill-card reveal" style="--delay:0.7s">
+          <div class="skill-icon-wrap"><span class="skill-icon">🔄</span></div>
+          <div class="skill-info"><span class="skill-name">n8n</span><span class="skill-category">Automation</span></div>
+          <div class="skill-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE ========== -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Professional Journey</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+      </div>
+      <div class="experience-timeline">
+
+        <!-- Kevell Global Solutions -->
+        <div class="exp-item reveal" style="--delay:0s">
+          <div class="exp-marker">
+            <div class="exp-dot"></div>
+            <div class="exp-line"></div>
+          </div>
+          <div class="exp-card glass-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-company">Kevell Global Solutions</h3>
+                <span class="exp-role">Intern</span>
+              </div>
+              <div class="exp-period">
+                <i class="fas fa-calendar-alt"></i>
+                <span>August 2024</span>
+              </div>
+            </div>
+            <div class="exp-body">
+              <p class="exp-bullet"><i class="fas fa-check-circle"></i> Gained hands-on experience in cross-platform mobile application development using Flutter.</p>
+              <div class="exp-projects">
+                <h4 class="exp-proj-label">Key Project</h4>
+                <div class="exp-project-item">
+                  <div class="exp-proj-info">
+                    <strong>Blood Bank App</strong>
+                    <p>A Flutter-based platform connecting blood donors and recipients with smart eligibility checks and streamlined donation management.</p>
+                  </div>
+                  <a href="https://github.com/Keshi-646/blood-bank" target="_blank" rel="noopener" class="exp-proj-link">
+                    <i class="fab fa-github"></i> View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ascentz Technologies -->
+        <div class="exp-item reveal" style="--delay:0.15s">
+          <div class="exp-marker">
+            <div class="exp-dot"></div>
+            <div class="exp-line"></div>
+          </div>
+          <div class="exp-card glass-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-company">Ascentz Technologies</h3>
+                <span class="exp-role">Intern</span>
+              </div>
+              <div class="exp-period">
+                <i class="fas fa-calendar-alt"></i>
+                <span>June 2025</span>
+              </div>
+            </div>
+            <div class="exp-body">
+              <p class="exp-bullet"><i class="fas fa-check-circle"></i> Focused on core Machine Learning concepts and their practical applications.</p>
+              <div class="exp-projects">
+                <h4 class="exp-proj-label">Key Project</h4>
+                <div class="exp-project-item">
+                  <div class="exp-proj-info">
+                    <strong>Spam Email Detection</strong>
+                    <p>A machine learning system that classifies emails as spam or legitimate using Python and advanced text classification algorithms.</p>
+                  </div>
+                  <a href="https://github.com/Keshi-646/Spam-Email-Detection" target="_blank" rel="noopener" class="exp-proj-link">
+                    <i class="fab fa-github"></i> View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skypark iTech -->
+        <div class="exp-item reveal" style="--delay:0.3s">
+          <div class="exp-marker">
+            <div class="exp-dot"></div>
+            <div class="exp-line"></div>
+          </div>
+          <div class="exp-card glass-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-company">Skypark iTech</h3>
+                <span class="exp-role">Intern</span>
+              </div>
+              <div class="exp-period">
+                <i class="fas fa-calendar-alt"></i>
+                <span>January 2026</span>
+              </div>
+            </div>
+            <div class="exp-body">
+              <p class="exp-bullet"><i class="fas fa-check-circle"></i> Gained practical experience in full-stack web development, building real-world client-facing applications.</p>
+              <div class="exp-projects">
+                <h4 class="exp-proj-label">Key Project</h4>
+                <div class="exp-project-item">
+                  <div class="exp-proj-info">
+                    <strong>E-Sevai App</strong>
+                    <p>A government services web application delivering accessible, digital civic services to citizens — built as a complete client project.</p>
+                  </div>
+                  <a href="https://github.com/Keshi-646/esevai" target="_blank" rel="noopener" class="exp-proj-link">
+                    <i class="fab fa-github"></i> View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtext">A curated selection of projects that demonstrate my technical capabilities and creative problem-solving</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- HireFusion — Featured -->
+        <div class="project-card project-featured reveal" style="--delay:0s">
+          <div class="project-img-wrap">
+            <img src="static/project5.png" alt="HireFusion" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/Keshi-646/hirefusion" target="_blank" rel="noopener" class="project-link-btn">
+                  <i class="fab fa-github"></i><span>View Code</span>
+                </a>
+              </div>
+            </div>
+            <div class="featured-badge"><i class="fas fa-star"></i> Featured</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">HireFusion</h3>
+            <p class="project-desc">An AI-powered recruitment and hiring platform engineered to streamline candidate evaluation, automate resume analysis, and optimise hiring workflows through intelligent automation and smart decision-making support — transforming how organisations discover and onboard top talent.</p>
+            <div class="project-tags">
+              <span class="project-tag">AI</span>
+              <span class="project-tag">Recruitment</span>
+              <span class="project-tag">Automation</span>
+              <span class="project-tag">Python</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Keshi-646/hirefusion" target="_blank" rel="noopener" class="project-github-link">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blood Bank App -->
+        <div class="project-card reveal" style="--delay:0.1s">
+          <div class="project-img-wrap">
+            <img src="static/project4.png" alt="Blood Bank App" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/Keshi-646/blood-bank" target="_blank" rel="noopener" class="project-link-btn">
+                  <i class="fab fa-github"></i><span>View Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Blood Bank App</h3>
+            <p class="project-desc">A robust Flutter-based platform engineered to seamlessly connect blood donors with recipients. Features intelligent eligibility validation, real-time donor matching, and streamlined donation management.</p>
+            <div class="project-tags">
+              <span class="project-tag">Flutter</span>
+              <span class="project-tag">Dart</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Keshi-646/blood-bank" target="_blank" rel="noopener" class="project-github-link">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spam Email Detection -->
+        <div class="project-card reveal" style="--delay:0.2s">
+          <div class="project-img-wrap">
+            <img src="static/project1.png" alt="Spam Email Detection" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/Keshi-646/Spam-Email-Detection" target="_blank" rel="noopener" class="project-link-btn">
+                  <i class="fab fa-github"></i><span>View Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Spam Email Detection</h3>
+            <p class="project-desc">A high-accuracy ML system that intelligently classifies emails as spam or legitimate using advanced text processing and classification algorithms to protect users from malicious content.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">NLP</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Keshi-646/Spam-Email-Detection" target="_blank" rel="noopener" class="project-github-link">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speech Therapy -->
+        <div class="project-card reveal" style="--delay:0.3s">
+          <div class="project-img-wrap">
+            <img src="static/project2.png" alt="Speech Therapy App" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/Keshi-646/Speech-Therapy" target="_blank" rel="noopener" class="project-link-btn">
+                  <i class="fab fa-github"></i><span>View Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Speech Therapy App</h3>
+            <p class="project-desc">An innovative Python application delivering personalised speech therapy exercises with real-time feedback and comprehensive progress tracking — making speech therapy more accessible and effective.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Keshi-646/Speech-Therapy" target="_blank" rel="noopener" class="project-github-link">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enunciating Dictionary -->
+        <div class="project-card reveal" style="--delay:0.4s">
+          <div class="project-img-wrap">
+            <img src="static/project3.png" alt="Enunciating Dictionary" class="project-img" loading="lazy">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/Keshi-646/Enunciating-Dict" target="_blank" rel="noopener" class="project-link-btn">
+                  <i class="fab fa-github"></i><span>View Code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Enunciating Dictionary</h3>
+            <p class="project-desc">A feature-rich offline dictionary built with Python Tkinter and JSON, delivering instant word meanings, definitions, and pronunciation guides — no internet connection required.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Tkinter</span>
+              <span class="project-tag">JSON</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/Keshi-646/Enunciating-Dict" target="_blank" rel="noopener" class="project-github-link">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION ========== -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Academic Background</span>
+        <h2 class="section-title">Education &amp; <span class="gradient-text">Qualifications</span></h2>
+      </div>
+      <div class="edu-timeline">
+        <div class="edu-item reveal">
+          <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="edu-card glass-card">
+            <div class="edu-period"><i class="fas fa-calendar"></i> 2023 — Present</div>
+            <h3 class="edu-title">B.Tech — Artificial Intelligence &amp; Data Science</h3>
+            <p class="edu-org"><i class="fas fa-university"></i> SNS College of Engineering, Coimbatore</p>
+            <div class="edu-status">
+              <span class="status-badge"><span class="status-pulse"></span>Currently Enrolled</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resume CTA -->
+      <div class="resume-cta-block reveal">
+        <div class="resume-cta-card glass-card">
+          <div class="resume-cta-content">
+            <div class="resume-icon"><i class="fas fa-file-alt"></i></div>
+            <div>
+              <h3>Interested in my full qualifications?</h3>
+              <p>Download my complete resume for a detailed overview of my education, skills, experience, and achievements.</p>
+            </div>
+          </div>
+          <a href="static/resume.pdf" target="_blank" class="btn-primary-grad resume-btn">
+            <i class="fas fa-download"></i>
+            <span>Download Resume</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACHIEVEMENTS ========== -->
+  <section id="achievements" class="section achievements-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Recognition &amp; Honours</span>
+        <h2 class="section-title">Achievements &amp; <span class="gradient-text">Certifications</span></h2>
+      </div>
+      <div class="achievements-grid">
+
+        <div class="achievement-card reveal" style="--delay:0s">
+          <div class="ach-top">
+            <div class="ach-icon">🏆</div>
+            <div class="ach-year">2023</div>
+          </div>
+          <h3 class="ach-title">Paper Presentation on Agriculture</h3>
+          <p class="ach-org"><i class="fas fa-building"></i> Banari Amman Institute of Technology</p>
+          <a href="https://drive.google.com/file/d/1wkUGiiILVI5QNhCuaqB989El6D4iRAcA/view?usp=sharing" target="_blank" rel="noopener" class="ach-cert-btn">
+            <i class="fas fa-certificate"></i><span>View Certificate</span><i class="fas fa-external-link-alt fa-xs"></i>
+          </a>
+          <div class="ach-glow"></div>
+        </div>
+
+        <div class="achievement-card reveal" style="--delay:0.1s">
+          <div class="ach-top">
+            <div class="ach-icon">🧮</div>
+            <div class="ach-year">2024</div>
+          </div>
+          <h3 class="ach-title">Math Quiz</h3>
+          <p class="ach-org"><i class="fas fa-building"></i> KGiSL Institute of Technology</p>
+          <a href="https://drive.google.com/file/d/1noKH24lpDR39dUUFVIIbbGLJYRbj4zD1/view?usp=drive_link" target="_blank" rel="noopener" class="ach-cert-btn">
+            <i class="fas fa-certificate"></i><span>View Certificate</span><i class="fas fa-external-link-alt fa-xs"></i>
+          </a>
+          <div class="ach-glow"></div>
+        </div>
+
+        <div class="achievement-card reveal" style="--delay:0.2s">
+          <div class="ach-top">
+            <div class="ach-icon">🎨</div>
+            <div class="ach-year">2025</div>
+          </div>
+          <h3 class="ach-title">UI &amp; UX Unplugged</h3>
+          <p class="ach-org"><i class="fas fa-building"></i> Karpagam Institute of Technology</p>
+          <a href="https://drive.google.com/file/d/1RD5hfdgw6_fbbqZ7iAuyPF4J9A3Or6BV/view?usp=drive_link" target="_blank" rel="noopener" class="ach-cert-btn">
+            <i class="fas fa-certificate"></i><span>View Certificate</span><i class="fas fa-external-link-alt fa-xs"></i>
+          </a>
+          <div class="ach-glow"></div>
+        </div>
+
+        <div class="achievement-card reveal" style="--delay:0.3s">
+          <div class="ach-top">
+            <div class="ach-icon">📊</div>
+            <div class="ach-year">2025</div>
+          </div>
+          <h3 class="ach-title">Data Quest</h3>
+          <p class="ach-org"><i class="fas fa-building"></i> Karpagam Institute of Technology</p>
+          <a href="https://drive.google.com/file/d/1svAKCOdgebbzI3KXwJoS32EKewLAxQyQ/view?usp=drive_link" target="_blank" rel="noopener" class="ach-cert-btn">
+            <i class="fas fa-certificate"></i><span>View Certificate</span><i class="fas fa-external-link-alt fa-xs"></i>
+          </a>
+          <div class="ach-glow"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Let's Work Together</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtext">Whether you have an opportunity, a collaboration idea, or just want to say hello — my inbox is always open.</p>
+      </div>
+      <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal">
+          <div class="glass-card contact-card">
+            <h3 class="contact-form-title">Send Me a Message</h3>
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xeoqpkvb" method="POST">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <div class="input-wrap">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrap">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <div class="input-wrap textarea-wrap">
+                  <i class="fas fa-comment"></i>
+                  <textarea id="message" name="message" rows="5" placeholder="Tell me about your opportunity or project..." required></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn-primary-grad submit-btn">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info reveal">
+          <div class="glass-card contact-info-card">
+            <h3>Direct Contact</h3>
+            <p class="contact-tagline">
+              I'm actively seeking <strong>internship opportunities</strong> in AI, Machine Learning, and Full-Stack Development. Let's build something amazing together.
+            </p>
+            <div class="contact-links">
+              <a href="mailto:keshipraba95228@gmail.com" class="contact-link-item">
+                <div class="contact-link-icon email-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <span class="contact-link-label">Email</span>
+                  <span class="contact-link-value">keshipraba95228@gmail.com</span>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/keshiya-v" target="_blank" rel="noopener" class="contact-link-item">
+                <div class="contact-link-icon linkedin-icon"><i class="fab fa-linkedin"></i></div>
+                <div>
+                  <span class="contact-link-label">LinkedIn</span>
+                  <span class="contact-link-value">keshiya-v</span>
+                </div>
+              </a>
+              <a href="https://github.com/Keshi-646" target="_blank" rel="noopener" class="contact-link-item">
+                <div class="contact-link-icon github-icon"><i class="fab fa-github"></i></div>
+                <div>
+                  <span class="contact-link-label">GitHub</span>
+                  <span class="contact-link-value">Keshi-646</span>
+                </div>
+              </a>
+              <div class="contact-link-item non-link">
+                <div class="contact-link-icon location-icon"><i class="fas fa-location-dot"></i></div>
+                <div>
+                  <span class="contact-link-label">Location</span>
+                  <span class="contact-link-value">Theni, India</span>
+                </div>
+              </div>
+            </div>
+            <div class="availability-badge">
+              <span class="avail-dot"></span>
+              <strong>Open to Opportunities</strong> — Actively seeking internships
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="brand-letter">K</span>eshiya<span class="brand-dot">.</span>
+        </div>
+        <p class="footer-tagline">Aspiring AI Engineer • Building the Future with Code</p>
+        <div class="footer-socials">
+          <a href="https://github.com/Keshi-646" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/keshiya-v" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:keshipraba95228@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="footer-nav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Keshiya V. Crafted with</span>
+          <span class="heart">❤️</span>
+          <span>and passion.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== NAVBAR SCROLL =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      updateActiveNav();
+    });
+
+    // ===== MOBILE MENU =====
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // ===== ACTIVE NAV =====
+    function updateActiveNav() {
+      const sections = document.querySelectorAll('section[id]');
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
+      });
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.toggle('active', link.getAttribute('data-section') === current);
+      });
+    }
+
+    // ===== TYPED TEXT =====
+    const roles = ['Aspiring AI Engineer', 'Data Science Student', 'Python Developer', 'ML Enthusiast', 'Flutter Developer'];
+    let ri = 0, ci = 0, deleting = false;
+    const typedEl = document.getElementById('typedText');
+    function type() {
+      const word = roles[ri];
+      typedEl.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+      if (!deleting && ci > word.length) { deleting = true; setTimeout(type, 1800); return; }
+      if (deleting && ci < 0) { deleting = false; ri = (ri + 1) % roles.length; }
+      setTimeout(type, deleting ? 60 : 110);
+    }
+    type();
+
+    // ===== REVEAL ON SCROLL =====
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('revealed'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+</body>
+</html>
